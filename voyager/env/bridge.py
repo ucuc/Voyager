@@ -29,7 +29,7 @@ class VoyagerEnv(gym.Env):
             raise ValueError("Either mc_port or azure_login must be specified")
         if mc_port and azure_login:
             warnings.warn(
-                "Both mc_port and mc_login are specified, mc_port will be ignored"
+                "Both mc_port and azure_login are specified, mc_port will be ignored"
             )
         self.mc_port = mc_port
         self.azure_login = azure_login
