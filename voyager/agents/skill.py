@@ -16,14 +16,14 @@ class SkillManager:
         model_name="gpt-3.5-turbo",
         temperature=0,
         retrieval_top_k=5,
-        request_timout=120,
+        request_timeout=120,
         ckpt_dir="ckpt",
         resume=False,
     ):
         self.llm = ChatOpenAI(
             model_name=model_name,
             temperature=temperature,
-            request_timeout=request_timout,
+            request_timeout=request_timeout,
         )
         U.f_mkdir(f"{ckpt_dir}/skill/code")
         U.f_mkdir(f"{ckpt_dir}/skill/description")

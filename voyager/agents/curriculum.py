@@ -19,7 +19,7 @@ class CurriculumAgent:
         temperature=0,
         qa_model_name="gpt-3.5-turbo",
         qa_temperature=0,
-        request_timout=120,
+        request_timeout=120,
         ckpt_dir="ckpt",
         resume=False,
         mode="auto",
@@ -29,12 +29,12 @@ class CurriculumAgent:
         self.llm = ChatOpenAI(
             model_name=model_name,
             temperature=temperature,
-            request_timeout=request_timout,
+            request_timeout=request_timeout,
         )
         self.qa_llm = ChatOpenAI(
             model_name=qa_model_name,
             temperature=qa_temperature,
-            request_timeout=request_timout,
+            request_timeout=request_timeout,
         )
         assert mode in [
             "auto",

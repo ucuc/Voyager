@@ -118,7 +118,7 @@ class Voyager:
         self.action_agent = ActionAgent(
             model_name=action_agent_model_name,
             temperature=action_agent_temperature,
-            request_timout=openai_api_request_timeout,
+            request_timeout=openai_api_request_timeout,
             ckpt_dir=ckpt_dir,
             resume=resume,
             chat_log=action_agent_show_chat_log,
@@ -130,7 +130,7 @@ class Voyager:
             temperature=curriculum_agent_temperature,
             qa_model_name=curriculum_agent_qa_model_name,
             qa_temperature=curriculum_agent_qa_temperature,
-            request_timout=openai_api_request_timeout,
+            request_timeout=openai_api_request_timeout,
             ckpt_dir=ckpt_dir,
             resume=resume,
             mode=curriculum_agent_mode,
@@ -140,14 +140,14 @@ class Voyager:
         self.critic_agent = CriticAgent(
             model_name=critic_agent_model_name,
             temperature=critic_agent_temperature,
-            request_timout=openai_api_request_timeout,
+            request_timeout=openai_api_request_timeout,
             mode=critic_agent_mode,
         )
         self.skill_manager = SkillManager(
             model_name=skill_manager_model_name,
             temperature=skill_manager_temperature,
             retrieval_top_k=skill_manager_retrieval_top_k,
-            request_timout=openai_api_request_timeout,
+            request_timeout=openai_api_request_timeout,
             ckpt_dir=skill_library_dir if skill_library_dir else ckpt_dir,
             resume=True if resume or skill_library_dir else False,
         )
